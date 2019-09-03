@@ -25,7 +25,7 @@ public class ErrorHandler {
     @ExceptionHandler(Exception.class)
     @ResponseStatus(code = HttpStatus.INTERNAL_SERVER_ERROR)
     public ErrorResponse handleNotFound(Exception exception) {
-        return new ErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR, "Something went wrong");
+        return new ErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR, "Something went wrong. Please try again");
     }
 
     static class ErrorResponse {
