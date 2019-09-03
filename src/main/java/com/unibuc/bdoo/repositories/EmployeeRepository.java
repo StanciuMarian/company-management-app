@@ -1,0 +1,11 @@
+package com.unibuc.bdoo.repositories;
+
+import com.unibuc.bdoo.domain.Employee;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface EmployeeRepository  extends JpaRepository<Employee, Long> {
+
+    List<Employee> findAllByFirstName(String firstName);
+}
